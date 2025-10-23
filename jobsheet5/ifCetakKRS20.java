@@ -6,6 +6,7 @@ public class ifCetakKRS20 {
         System.out.print("--- Cetak KRS SIAKAD ---");
         System.out.print("Apakah UKT sudah lunas? (true/false): ");
         boolean uktLunas = sc.nextBoolean();
+        
         // ternary operator
         String pesan = uktLunas ? "Pembayaran UKT terverifikasi\nSilahkan cetak KRS dan minta tanda tangan DPA" : "Pembayaran UKT belum lunas\nSilahkan lunasi UKT terlebih dahulu";
         System.out.println(pesan);
