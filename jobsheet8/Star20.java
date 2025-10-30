@@ -1,4 +1,5 @@
 package jobsheet8;
+
 import java.util.Scanner;
 
 public class Star20 {
@@ -7,7 +8,7 @@ public class Star20 {
         System.out.println("Masukkan nilai N = ");
         int N = sc.nextInt();
 
-        for(int i = 0; i <= N; i+=2){
+        for (int i = 0; i <= N; i++) {
             System.out.print("*");
         }
     }
