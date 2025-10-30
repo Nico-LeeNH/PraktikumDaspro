@@ -1,4 +1,5 @@
 package jobsheet8;
+
 import java.util.Scanner;
 
 public class NilaiKelompok20 {
@@ -6,6 +7,9 @@ public class NilaiKelompok20 {
         Scanner sc = new Scanner(System.in);
         int i = 1;
         float nilaiMhs, totalNilai, rataNilai;
+        float maxRata = 0;
+        int kelompokMax = 0;
+
         while (i <= 6) {
             System.out.println("Kelompok " + i);
             totalNilai = 0;
@@ -19,8 +23,16 @@ public class NilaiKelompok20 {
 
             rataNilai = totalNilai / 5;
             System.out.println("Kelompok " + i + ": " + "nilai rata-rata " + rataNilai);
+
+            if (rataNilai > maxRata) {
+                maxRata = rataNilai;
+                kelompokMax = i;
+            }
+
             i++;
 
         }
+        System.out.println("\nKelompok dengan rata-rata tertinggi:");
+        System.out.println("Kelompok " + kelompokMax + " dengan nilai rata-rata " + maxRata);
     }
 }
