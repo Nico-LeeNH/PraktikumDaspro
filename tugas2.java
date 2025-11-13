@@ -1,28 +1,30 @@
-
+import java.util.Scanner;
 public class tugas2 {
     public static void main(String[] args) {
-        char h = 'a'; // huruf awal
+        Scanner sc = new Scanner(System.in);
+        int[] bilangan = new int[10];
 
-        int baris = 5; // jumlah baris segitiga
+        System.out.println("Masukkan 10 elemen array:");
+        for (int i = 0; i < bilangan.length; i++) {
+            System.out.print("Elemen ke-" + (i + 1) + ": ");
+            bilangan[i] = sc.nextInt();
+        }
 
-        for (int i = 1; i <= baris; i++) {
-            int jumlahHuruf = 2 * i - 1;
+        System.out.print("\nMasukkan nilai yang ingin dicari: ");
+        int n = sc.nextInt();
 
-            // cetak spasi di depan agar segitiga rata tengah
-            for (int b = baris - i; b > 0; b--) {
-                System.out.print(" ");
+        boolean ditemukan = false;
+        
+        for (int i = 0; i < bilangan.length; i++) {
+            if (bilangan[i] == n) {
+                ditemukan = true;
+                System.out.println("Nilai " + n + "Indeks ke-" + i);
+                
             }
+        }
 
-            // cetak huruf di tiap baris
-            for (int j = 1; j <= jumlahHuruf; j++) {
-                // if (h > 'z') { // reset kalau lewat z
-                //     h = 'a';
-                // }
-                System.out.print(h);
-                h++;
-            }
-
-            System.out.println(); // ganti baris
+        if (!ditemukan) {
+            System.out.println("Nilai " + n + " tidak ditemukan dalam array.");
         }
     }
 }
