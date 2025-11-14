@@ -28,7 +28,6 @@ public class Survei20 {
             System.out.println("Responden ke-" + (i + 1) + ": " + rata);
         }
 
-        // c. Rata-rata tiap pertanyaan
         System.out.println("\n=== Rata-rata tiap pertanyaan ===");
         for (int j = 0; j < pertanyaan; j++) {
             double total = 0;
