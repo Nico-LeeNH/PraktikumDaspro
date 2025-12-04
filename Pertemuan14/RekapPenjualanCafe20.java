@@ -24,7 +24,7 @@ public class RekapPenjualanCafe20 {
 
     public void tampilData() {
         System.out.println("\n===== TABEL PENJUALAN =====");
-        System.out.print("Menu\t\t");
+        System.out.print("Menu\t");
         for (int h = 1; h <= data[0].length; h++) {
             System.out.print("Hari ke " + h + "\t");
         }
@@ -32,8 +32,6 @@ public class RekapPenjualanCafe20 {
 
         for (int i = 0; i < data.length; i++) {
             System.out.print(menu[i] + "\t");
-            if (menu[i].length() < 8)
-                System.out.print("\t");
 
             for (int j = 0; j < data[0].length; j++) {
                 System.out.print(data[i][j] + "\t\t");
@@ -43,8 +41,8 @@ public class RekapPenjualanCafe20 {
     }
 
     public void menuTertinggi() {
-        int maxTotal = -1;
-        int indexMenu = -1;
+        int maxTotal = 0;
+        int indexMenu = 0;
 
         for (int i = 0; i < data.length; i++) {
             int total = 0;
